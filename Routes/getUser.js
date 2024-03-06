@@ -17,7 +17,7 @@ export default {
                     res.send(`
                         <meta content="${response.data.username}${response.data.discriminator == '0' ? "" : `#${response.data.discriminator}`}" property="og:title" />
                         <meta content="AvatarHASH: ${user.avatar || "None"}\nAvatarNumber: ${avatarNumber}" property="og:description" />
-                        <meta content="https://api.borbot.xyz/api/userBanner/${req.params.userID}" property="og:image" />
+                        <meta content="${process.env.domain}/api/userBanner/${req.params.userID}" property="og:image" />
                         <meta content="#43B581" data-react-helmet="true" name="theme-color" />
                         <meta name="twitter:card" content="summary_large_image">                    
                     `)
