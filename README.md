@@ -1,3 +1,4 @@
+[![GitHub Stars](https://img.shields.io/github/stars/Borbot33/BorbotAPI.svg)](https://github.com/Borbot33/BorbotAPI)]
 # BORBOT API
 
 API for YAGPDB made in Express.JS by **Borbot33**
