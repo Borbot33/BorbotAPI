@@ -1,0 +1,15 @@
+version: "3.9"
+
+services:
+    borbotapi:
+        container_name: borbotapi
+        image: borbotapi
+        restart: always
+        build:
+            context: .
+            dockerfile: Dockerfile
+            target: base
+        ports:
+            - "3750:3750"
+        env_file:
+          - .env
