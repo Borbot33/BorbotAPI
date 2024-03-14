@@ -1,4 +1,3 @@
-[![GitHub Stars](https://img.shields.io/github/stars/Borbot33/BorbotAPI.svg)](https://github.com/Borbot33/BorbotAPI)]
 # BORBOT API
 
 API for YAGPDB made in Express.JS by **Borbot33**
@@ -40,6 +39,11 @@ API for YAGPDB made in Express.JS by **Borbot33**
         node .
     ```
 5. Now publish the api and play around :3
+
+# TODO
+
+- Discord webhook support for yag (It was in my old api)
+- UNB API support (Optional / You can enable it in env file)
    
 # Thanks for
 
