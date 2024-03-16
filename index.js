@@ -15,7 +15,7 @@ const app = express();
 
 readdirSync("./Routes").forEach(file => {
     import(`./Routes/${file}`).then(module => {
-        app.get(module.default.url, (req, res) => module.default.execute(req, res))
+      app.get(`${process.env.customPath || ""}${module.default.url}`, (req, res) => module.default.execute(req, res))
     })
 })
 

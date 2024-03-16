@@ -18,7 +18,9 @@ export default {
             } else {
                 if(process.env.unbToken) {
                     const unb = new unbApi.Client(process.env.unbToken);
-                    const data = await unb.getGuild(req.params.guild);
+                    const data = await unb.getGuild(req.params.guild)
+                        .catch(e => null);
+
                     if(data) {
                         guild = {
                             name: data.name,
@@ -26,9 +28,20 @@ export default {
                             memberCount: data.memberCount,
                             icon: data.icon ?? null
                         }
-                    }    
-                } else {
-                    return res.send({type: "Error", response: "We can't get data from this server. (UNB Problem)"})
+                    }
+                }
+                if(!guild) {
+                    const fetch = await axios.get(`https://discordapp.com/api/guilds/${req.params.guild}/widget.json`)
+                        .then(e => e.data)
+                        .catch(e => null)
+
+                    if(fetch) {
+                        guild = {
+                            name: fetch.name,
+                            id: fetch.id,
+                            memberCount: fetch.presence_count
+                        }
+                    }
                 }
             }
 
@@ -38,6 +51,7 @@ export default {
                     <meta content="${guild.name}" property="og:title" />
                     <meta content="Members: ${guild.memberCount}${guild.icon ? `\nGuildIcon: ${guild.icon}` : ""}" property="og:description" />
                     <meta content="#43B581" data-react-helmet="true" name="theme-color" />   
+                    <meta http-equiv="refresh" content="0; url=https://www.youtube.com/watch?v=wh9QLjk3M2k" />
                 `)
             } else {
                 return res.send({type: "Error", response: "We can't get data from this server."})

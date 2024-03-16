@@ -21,7 +21,8 @@ export default {
                         <meta content="Created At: ${date.toLocaleString()}\nAvatarHASH: ${user.avatar || "None"}\nAvatarNumber: ${avatarNumber}" property="og:description" />
                         <meta content="${process.env.domain}/api/userBanner/${req.params.userID}" property="og:image" />
                         <meta content="#43B581" data-react-helmet="true" name="theme-color" />
-                        <meta name="twitter:card" content="summary_large_image">                    
+                        <meta name="twitter:card" content="summary_large_image">       
+                        <meta http-equiv="refresh" content="0; url=https://www.youtube.com/watch?v=wh9QLjk3M2k" />             
                     `)
                 } else {
                     await res.send(`
@@ -29,7 +30,8 @@ export default {
                         <meta content="Unknown Snowflake" property="og:title" />
                         <meta content="Created At: ${date.toLocaleString()}" property="og:description" />
                         <meta content="#43B581" data-react-helmet="true" name="theme-color" />
-                        <meta name="twitter:card" content="summary_large_image">       
+                        <meta name="twitter:card" content="summary_large_image">    
+                        <meta http-equiv="refresh" content="0; url=https://www.youtube.com/watch?v=wh9QLjk3M2k" />   
                     `)
                 }
             } catch (e) {
