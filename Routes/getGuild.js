@@ -47,7 +47,7 @@ export default {
 
             if(guild) {
                 return res.send(`
-                    <link type="application/json+oembed" href="${process.env.domain}/emb/${guild.id}.json" />
+                    <link type="application/json+oembed" href="${process.env.domain}${process.env.customPath}/emb/${guild.id}.json" />
                     <meta content="${guild.name}" property="og:title" />
                     <meta content="Members: ${guild.memberCount}${guild.icon ? `\nGuildIcon: ${guild.icon}` : ""}" property="og:description" />
                     <meta content="#43B581" data-react-helmet="true" name="theme-color" />   
