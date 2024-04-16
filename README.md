@@ -45,6 +45,6 @@ API for YAGPDB made in Express.JS by **Borbot33**
 - Discord webhook support for yag (It was in my old api)
 - UNB API support (Optional / You can enable it in env file)
    
-# Thanks for
+# Thanks to
 
 - [BlackWolf](https://github.com/BlackWolfWoof) - idk why xd
