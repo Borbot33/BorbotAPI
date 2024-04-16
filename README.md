@@ -14,7 +14,7 @@ API for YAGPDB made in Express.JS by **Borbot33**
 1. Rename the file `example.env` to `.env`
 2. Configure the file `.env`.
 3. Edit the file `docker-compose.yml` **(Optional)**
-4. Use the `docker compose` command
+4. Run the `docker compose` command
    
     ```bash
     sudo docker compose up -d
@@ -28,7 +28,7 @@ API for YAGPDB made in Express.JS by **Borbot33**
 **Instructions:**
 1. Rename the file `example.env` to `.env`
 2. Configure the file `.env`
-3. Use this command to install libraries
+3. Run this command to install libraries
    
     ```bash
         npm i
