@@ -6,13 +6,14 @@ There are two official ways, using docker or just with the `node .` command. Bel
 
 ## Docker Compose
 **Requirements:**
-- Docker
+- Installed docker
 
 **Instructions:**
 1. Rename the file `example.env` to `.env`
 2. Edit the `.env` file.
 3. Edit the `docker-compose.yml` file **(Optional)**
 4. Run the `docker compose` command
+
     ```bash
     sudo docker compose up -d
     ```
@@ -25,10 +26,12 @@ There are two official ways, using docker or just with the `node .` command. Bel
 1. Rename the file `example.env` to `.env`
 2. Edit the file `.env`
 3. Run this command to install all required libraries
+
     ```bash
-        npm i
+    npm i
     ```
-4. Run the api:
+5. Run the api:
+   
     ```
-        node .
+    node .
     ```
